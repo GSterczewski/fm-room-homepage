@@ -1,0 +1,133 @@
+@import "reset";
+
+$arrow-size: 40px;
+
+$dark-gray: hsl(0, 0%, 63%);
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$very-dark-gray: hsl(0, 0%, 27%);
+
+@mixin background-props {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+$mobile-breakpoint: 400px;
+$font-size--mobile: 14px;
+$font-size--desktop: 16px;
+$spartan-font: "Spartan", sans-serif;
+$article-padding: 56px 24px;
+$article-footer-space: 40px;
+$heading-bottom-space: 20px;
+html {
+  font-size: $font-size--mobile;
+  @media (min-width: $mobile-breakpoint) {
+    font-size: $font-size--desktop;
+  }
+}
+body {
+  position: relative;
+  font-family: $spartan-font;
+}
+
+.header {
+  width: 60%;
+  padding: 0 16px;
+  height: 50px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger {
+  background-image: url("public/images/icon-hamburger.svg");
+  @include background-props();
+  width: 30px;
+  height: 30px;
+}
+.brand {
+  color: $white;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.article-cover {
+  position: relative;
+}
+.article-cover-img {
+  width: 100%;
+  max-width: 750px;
+}
+
+.article-body {
+  padding: $article-padding;
+}
+.arrows {
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  display: flex;
+}
+
+.arrow {
+  background-color: $black;
+  width: $arrow-size;
+  height: $arrow-size;
+  background-repeat: no-repeat;
+  background-position: center;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $very-dark-gray;
+  }
+}
+.arrow-left {
+  background-image: url("public/images/icon-angle-left.svg");
+}
+.arrow-right {
+  background-image: url("public/images/icon-angle-right.svg");
+}
+
+.heading {
+  margin-bottom: $heading-bottom-space;
+}
+.text {
+  color: $dark-gray;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+.article-heading {
+  font-size: 1.2rem;
+}
+.article-footer {
+  color: $very-dark-gray;
+  margin-top: $article-footer-space;
+  letter-spacing: 7px;
+  font-weight: 600;
+  text-transform: uppercase;
+  & > span {
+    margin-left: 24px;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $dark-gray;
+    fill: $dark-gray;
+  }
+}
+.footer {
+  padding: $article-padding;
+}
+.footer-heading {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+}
+
+.hoverable {
+  &:hover {
+    cursor: pointer;
+    background-color: $dark-gray;
+  }
+}
