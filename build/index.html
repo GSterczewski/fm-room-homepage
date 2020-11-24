@@ -8,7 +8,8 @@
   <meta http-equiv="Content-Security-Policy" content="img-src 'self' ;">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap" rel="stylesheet"> 
-  <title>Frontend Mentor | Room homepage</title>
+<script src="public/slider.js" defer></script>  
+<title>Frontend Mentor | Room homepage</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <!--
@@ -27,15 +28,15 @@
 <main>
   <article class="article">
     <section class="article-cover">
-      <img class="article-cover-img" src="public/images/mobile-image-hero-1.jpg" />
+      <img class="article-cover-img" id="js-img" src="public/images/mobile-image-hero-1.jpg" />
       <aside class="arrows">
-        <div class="arrow arrow-left"></div>
-        <div class="arrow arrow-right"></div>
+        <div class="arrow arrow-left" id="js-previous"></div>
+        <div class="arrow arrow-right" id="js-next"></div>
       </aside> 
     </section>
     <section class="article-body">
-      <h2 class="heading article-heading">Discover innovative ways to decorate</h2>
-      <p class="text article-text">
+      <h2 class="heading article-heading" id="js-title">Discover innovative ways to decorate</h2>
+      <p class="text article-text" id="js-body">
         We provide unmatched quality, comfort, and style for property owners across the country. 
         Our experts combine form and function in bringing your vision to life. Create a room in your 
         own style with our collection and make your property a reflection of you and what you love.
