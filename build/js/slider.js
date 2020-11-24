@@ -48,7 +48,6 @@ const previousArticle = () => {
     loadArticle()
 }
 
-
 window.onload = function(){
     loadArticle()
     nodes.nextArrow.addEventListener("click",nextArticle)
