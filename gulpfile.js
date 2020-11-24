@@ -1,6 +1,9 @@
 const sass = require("gulp-sass");
 const { src,dest, watch } = require("gulp");
 const sync = require("browser-sync").create();
+const uglify = require("gulp-uglify");
+
+
 const sassDir = "./src/scss/*.scss"
 const cssOutputDir = "./build"
 const buildDir = "./build"
@@ -19,14 +22,20 @@ function watchBuild(){
     watcher.on("unlink", sync.reload)
 }
 
+function uglifyJS(){
+    const source = './src/**/*.js'
+    const output = './build'
+    return src(source)
+    .pipe(uglify())
+    .pipe(dest(output))
+}
+
 
 
 function run(){
     serve()
     watchSass()
     watchBuild()
-
-
 }
 
 function serve(){
@@ -44,7 +53,6 @@ function transpileSCSS(){
  
  )
 }
-
+exports.uglify = uglifyJS
 exports.run = run
 exports.sass = transpileSCSS
-//exports.default = defaultTask
