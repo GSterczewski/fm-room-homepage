@@ -50,7 +50,7 @@ body {
 }
 
 .hamburger {
-  background-image: url("public/images/icon-hamburger.svg");
+  background-image: url("assets/images/icon-hamburger.svg");
   @include background-props();
   width: 30px;
   height: 30px;
@@ -149,10 +149,10 @@ body {
   }
 }
 .arrow-left {
-  background-image: url("public/images/icon-angle-left.svg");
+  background-image: url("assets/images/icon-angle-left.svg");
 }
 .arrow-right {
-  background-image: url("public/images/icon-angle-right.svg");
+  background-image: url("assets/images/icon-angle-right.svg");
 }
 
 .heading {

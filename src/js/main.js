@@ -41,10 +41,11 @@ const hookNodes = collection => {
 const Slider = (nodes,articles) => {
     let count = 0;
     const max = articles.length - 1;
+    const imgDir = "assets/images"
     const incrementCount = () => count < max ? count++ : count = 0;
     const decrementCount = () => count > 0 ? count-- : count = max;
     const getArticle = () => articles[count]
-    const createImgSource = title => `public/images/${title}`
+    const createImgSource = title => `${imgDir}/${title}`
 
     const loadArticle = () => {
         const {title,body,img} = getArticle()
@@ -61,6 +62,7 @@ const Slider = (nodes,articles) => {
         loadArticle()
     } 
     return {
+    loadArticle,
     nextArticle,
     previousArticle
 }}
