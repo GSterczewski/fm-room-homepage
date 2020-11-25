@@ -12,6 +12,13 @@ $very-dark-gray: hsl(0, 0%, 27%);
   background-position: center;
 }
 
+@mixin link-reset {
+  color: black;
+  &:link {
+    text-decoration: none;
+  }
+}
+
 $mobile-breakpoint: 400px;
 $font-size--mobile: 14px;
 $font-size--desktop: 16px;
@@ -52,6 +59,63 @@ body {
   color: $white;
   font-size: 1.3rem;
   font-weight: bold;
+}
+
+/* NAV SECTION*/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.4s ease-in;
+}
+.overlay--active {
+  height: 100%;
+  opacity: 1;
+}
+.mobile-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 12px;
+  position: absolute;
+  top: -10%;
+  left: 0;
+  z-index: 4;
+  background-color: $white;
+  width: 100%;
+  transition: top 0.3s ease-out;
+  overflow: hidden;
+}
+.mobile-nav--active {
+  top: 0;
+}
+.mobile-nav-anchors {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 70%;
+}
+
+.mobile-nav-anchor {
+  @include link-reset();
+  font-weight: 600;
+  &:hover,
+  &:focus {
+    color: $dark-gray;
+  }
+}
+.times-svg {
+  fill: $dark-gray;
+  &:hover {
+    fill: $very-dark-gray;
+    animation: spin 0.35s ease-in-out;
+  }
 }
 
 .article-cover {
@@ -129,5 +193,11 @@ body {
   &:hover {
     cursor: pointer;
     background-color: $dark-gray;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(180deg);
   }
 }
