@@ -5,6 +5,10 @@ $header-hide-breakpoint: 960px;
   top: 40px;
   left: 40px;
   display: none;
+  &:hover,&:focus{
+    cursor: pointer;
+    animation: spin .350s ease-in-out;
+  }
   @media (max-width: $header-hide-breakpoint) {
     display: block;
   }
@@ -18,6 +22,7 @@ $header-hide-breakpoint: 960px;
   position: absolute;
   top: 5%;
   color: $white;
+  transition: all 0.350s ease-in-out;
 
   .close-btn {
     fill: $dark-gray;
