@@ -6,20 +6,30 @@
 
 /*HEADER SECTION*/
 $header-hide-breakpoint: 960px;
-
-.header-menu-btn {
+.header--mobile{
   position: absolute;
   top: 40px;
   left: 40px;
   display: none;
-  &:hover,&:focus{
-    cursor: pointer;
-    animation: spin .350s ease-in-out;
-  }
+  color:$white;
+  width:50%;
   @media (max-width: $header-hide-breakpoint) {
-    display: block;
+    
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu-btn{
+    &:hover,&:focus{
+      animation: spin .350s ease-in-out;
+    }
   }
 }
+.logo{
+  font-size:1.1rem;
+    font-weight: 500;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -30,7 +40,9 @@ $header-hide-breakpoint: 960px;
   top: 5%;
   color: $white;
   transition: all 0.350s ease-in-out;
-
+  .header-logo{
+    padding-bottom: 8px;
+  }
   .close-btn {
     fill: $dark-gray;
 
@@ -59,6 +71,7 @@ $header-hide-breakpoint: 960px;
     }
     .header-logo {
       display: none;
+     
     }
   }
 }
@@ -78,6 +91,13 @@ $header-hide-breakpoint: 960px;
   display: flex;
   justify-content: space-between;
   list-style: none;
+  & > li {
+    border-bottom:2px solid transparent;
+    padding-bottom: 8px;
+  }
+  & > li:hover{
+    border-color: $white;
+  }
 }
 
 .nav-anchor {
