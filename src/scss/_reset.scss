@@ -3,3 +3,10 @@
   padding: 0;
   margin: 0;
 }
+
+@mixin link-reset {
+  color: black;
+  &:link {
+    text-decoration: none;
+  }
+}
