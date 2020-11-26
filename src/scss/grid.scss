@@ -2,7 +2,10 @@
 @import "colors";
 //@import "header";
 
-
+.text{
+  line-height: 1.5;
+  color:$dark-gray;
+}
 
 /*HEADER SECTION*/
 $header-hide-breakpoint: 960px;
@@ -161,19 +164,36 @@ body {
   flex-grow: 1;
   height: 80%;
   padding: 20% 14% 0 14%;
-  font-size: 1.2vmax;
+  @media(max-width:1300px){
+    padding-top:15%;
+    
+  }
   & > .main-article-heading {
-    font-size: 2em;
+    font-size: 2rem;
+    @media(max-width:1300px){
+      font-size:1.5rem;
+    }
   }
   & > .main-article-body {
     margin: 5% 0 10% 0;
-    font-size: 0.9em;
+    font-size: 0.9rem;
   }
   & > .main-article-action {
-    font-size: 1.2em;
+    font-size: 1.1rem;
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 5px;
+    &:hover{
+      color:$dark-gray;
+      cursor: pointer;
+    }
+    &:hover > span{
+      fill:$dark-gray;
+      
+    }
+    &>span{
+      margin-left:16px;
+    }
   }
 }
 
@@ -217,17 +237,27 @@ body {
 }
 .left-bottom-section {
   width: 30%;
-  background-color: chocolate;
+  
 }
 .central-bottom-section {
-  background-color: cyan;
-  flex-grow: 1;
+  width:40%;
+  
 }
 .right-bottom-section {
   width: 30%;
-  background-color: darkgoldenrod;
 }
 
+.about-section{
+  font-size:0.9rem;
+  padding:10% ;
+  .about-section-heading{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size:1rem;
+    margin-bottom:24px;
+  }
+  .about-section-content{}
+}
 @keyframes spin{
   50%{
     transform: rotate(90deg);
