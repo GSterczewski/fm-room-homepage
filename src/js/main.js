@@ -26,7 +26,9 @@ const IDCollection = {
     body : 'js-body',
     img : 'js-img',
     nextArrow : 'js-next',
+    nextArrowMobile : 'js-next-mobile',
     previousArrow : 'js-previous',
+    previousArrowMobile : 'js-previous-mobile'
 }
 
 
@@ -56,6 +58,7 @@ const Slider = (nodes,articles) => {
     const nextArticle = () => {
         incrementCount()
         loadArticle()
+       
     }
     const previousArticle = () => {
         decrementCount()
@@ -96,5 +99,7 @@ window.onload = () => {
     nodes.hamburger.addEventListener("click",navigation.show)    
     nodes.closeBtn.addEventListener("click",navigation.hide)
     nodes.nextArrow.addEventListener("click",slider.nextArticle)    
-    nodes.previousArrow.addEventListener("click",slider.previousArticle)    
+    nodes.previousArrow.addEventListener("click",slider.previousArticle)
+    nodes.nextArrowMobile.addEventListener("click",slider.nextArticle)    
+    nodes.previousArrowMobile.addEventListener("click",slider.previousArticle)    
 }
