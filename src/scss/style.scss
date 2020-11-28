@@ -1,3 +1,4 @@
+@import "variables";
 @import "reset";
 @import "colors";
 @import "header";
@@ -6,9 +7,6 @@
   line-height: 1.5;
   color: $very-dark-gray;
 }
-
-$spartan-font: "Spartan", sans-serif;
-$tablet-breakpoint: 960px;
 
 @mixin img-size($w) {
   width: $w;
@@ -139,7 +137,6 @@ body {
   display: flex;
   width: 25%;
   height: 5vmax;
-  //height: 100%;
 }
 
 .arrow {
@@ -161,39 +158,28 @@ body {
   background-image: url("assets/images/icon-angle-right.svg");
 }
 
-.bottom-section-wrapper {
+.bottom-section {
+  max-height: 266px;
   @media (max-width: $tablet-breakpoint) and (min-width: 500px) {
     flex-direction: row;
     flex-wrap: wrap;
-    .left-bottom-section {
+    img:first-of-type {
       order: 1;
       width: 50%;
     }
-    .right-bottom-section {
+    img:nth-of-type(2) {
       order: 2;
       width: 50%;
     }
-    .central-bottom-section {
+    .about-section {
       order: 3;
       width: 100%;
     }
   }
 }
-.left-bottom-section {
-  width: 30%;
-}
-.central-bottom-section {
-  width: 40%;
-}
-.right-bottom-section {
-  width: 30%;
-}
 
-.bottom-section {
-  & > img {
-    width: 100%;
-    height: 100%;
-  }
+.bottom-section-img {
+  width: 30%;
   @media (max-width: $tablet-breakpoint) {
     width: 100%;
   }
@@ -201,7 +187,14 @@ body {
 
 .about-section {
   font-size: 0.9rem;
-  padding: 10%;
+  padding: 3% 3%;
+  width: 40%;
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 100%;
+    padding: 10%;
+    font-size: 1rem;
+  }
   .about-section-heading {
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -212,6 +205,7 @@ body {
     }
   }
 }
+
 @keyframes spin {
   50% {
     transform: rotate(90deg);
