@@ -44,9 +44,7 @@ const IDCollection = {
     nextArrowMobile : 'js-next-mobile',
     previousArrow : 'js-previous',
     previousArrowMobile : 'js-previous-mobile'
-}
-
-
+};
 const hookNodes = collection => {
     let hookedNodes = {}
     for(let element in collection){
