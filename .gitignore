@@ -15,5 +15,5 @@
 .DS_Store
 
 .prettierignore
-spec/
+
 node_modules/

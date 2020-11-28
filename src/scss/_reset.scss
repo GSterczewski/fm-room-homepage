@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin link-reset {
+  color: inherit;
+  &:link {
+    text-decoration: none;
+  }
+}
+
+a {
+  @include link-reset;
+}
