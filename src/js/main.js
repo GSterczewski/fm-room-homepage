@@ -106,11 +106,11 @@ const Navigation = nodes => {
     
     const show = () => {
         nodes.navigation.classList.add(activeClasses.navigation)
-        //nodes.overlay.classList.add(activeClasses.overlay)
+        nodes.overlay.classList.add(activeClasses.overlay)
     }
     const hide = () => {
         nodes.navigation.classList.remove(activeClasses.navigation)
-        //nodes.overlay.classList.remove(activeClasses.overlay)
+        nodes.overlay.classList.remove(activeClasses.overlay)
     }
     return {
         show,
