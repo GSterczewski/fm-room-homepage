@@ -5,7 +5,7 @@
 }
 
 @mixin link-reset {
-  color: black;
+  color: inherit;
   &:link {
     text-decoration: none;
   }

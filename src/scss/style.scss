@@ -1,126 +1,14 @@
 @import "reset";
 @import "colors";
-//@import "header";
+@import "header";
 
-.text{
+.text {
   line-height: 1.5;
-  color:$dark-gray;
+  color: $very-dark-gray;
 }
 
-/*HEADER SECTION*/
-$header-hide-breakpoint: 960px;
-$tablet-breakpoint:960px;
-.header--mobile{
-  position: absolute;
-  top: 25px;
-  left: 40px;
-  display: none;
-  color:$white;
-  width:50%;
-  @media (max-width: $header-hide-breakpoint) {
-    
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .menu-btn{
-    &:hover,&:focus{
-      animation: spin .350s ease-in-out;
-    }
-  }
-}
-.logo{
-  font-size:1.1rem;
-    font-weight: 500;
-}
-
-.header {
-  //background-color: red;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 60%;
-  padding-left: 5%;
-  position: absolute;
-  top: 5%;
-  color: $white;
-  transition: all 0.350s ease-in-out;
-  .header-logo{
-    padding-bottom: 8px;
-  }
-  .close-btn {
-    fill: $dark-gray;
-
-    &:hover,
-    &:focus {
-      fill: $very-dark-gray;
-      cursor: pointer;
-    }
-  }
-
-  & > .close-btn {
-    display: none;
-  }
-
-  @media (max-width: $header-hide-breakpoint) {
-    background-color: $white;
-    color: $black;
-    top: -50%;
-    width: 100%;
-    padding: 5vmax 5%;
-    & > .nav {
-      width: 80%;
-    }
-    & > .close-btn {
-      display: inline;
-    }
-    .header-logo {
-      display: none;
-     
-    }
-  }
-}
-.mobile-header--active {
-  top: 0;
-}
-
-.header-logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: $white;
-}
-.nav {
-  width: 70%;
-}
-.nav-anchors {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  & > li {
-    border-bottom:2px solid transparent;
-    padding-bottom: 8px;
-  }
-  & > li:hover{
-    border-color: $white;
-  }
-}
-
-.nav-anchor {
-  @include link-reset();
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: inherit;
-  @media (max-width: $header-hide-breakpoint) {
-    font-weight: 700;
-    font-size: 0.9rem;
-    &:hover {
-      color: $dark-gray;
-    }
-  }
-}
-
-/*****************************************************************/
 $spartan-font: "Spartan", sans-serif;
+$tablet-breakpoint: 960px;
 
 @mixin img-size($w) {
   width: $w;
@@ -136,14 +24,14 @@ body {
 
 .layout-wrapper {
   min-height: 100vh;
-  max-width: 1700px;
+  max-width: 1900px;
   font-family: $spartan-font;
   width: 100%;
 }
 
 .flex-container {
   display: flex;
-  @media(max-width: $tablet-breakpoint){
+  @media (max-width: $tablet-breakpoint) {
     flex-direction: column;
   }
 }
@@ -151,23 +39,21 @@ body {
   display: flex;
   width: 40%;
   flex-direction: column-reverse;
-  @media(max-width: $tablet-breakpoint){
-    width:100%;
-    
+  @media (max-width: $tablet-breakpoint) {
+    width: 100%;
   }
 }
 
 .hero-section {
   width: 60%;
   height: auto;
-  background-color: hotpink;
+
   position: relative;
-  @media(max-width: $tablet-breakpoint){
-    width:100%;
-    
+  @media (max-width: $tablet-breakpoint) {
+    width: 100%;
   }
 
-  & > .hero-img {
+  .hero-img {
     width: 100%;
     height: 100%;
   }
@@ -177,19 +63,19 @@ body {
   flex-grow: 1;
   height: 80%;
   padding: 20% 14% 0 14%;
-  @media(max-width:1300px){
-    padding-top:15%; 
+  @media (max-width: 1300px) {
+    padding-top: 15%;
   }
-  @media(max-width:$tablet-breakpoint){
-    padding-top:10%; 
-    padding-bottom:10%;
-    padding:10%; 
+  @media (max-width: $tablet-breakpoint) {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding: 10%;
   }
 
   & > .main-article-heading {
     font-size: 2rem;
-    @media(max-width:1300px){
-      font-size:1.5rem;
+    @media (max-width: 1300px) {
+      font-size: 1.5rem;
     }
   }
   & > .main-article-body {
@@ -201,18 +87,18 @@ body {
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 5px;
-    @media(max-width:$tablet-breakpoint){
+    @media (max-width: $tablet-breakpoint) {
       font-size: 0.9rem;
     }
-    &:hover{
-      color:$dark-gray;
+    &:hover {
+      color: $dark-gray;
       cursor: pointer;
     }
-    &:hover > span{
-      fill:$dark-gray;
+    &:hover > span {
+      fill: $dark-gray;
     }
-    &>span{
-      margin-left:16px;
+    & > span {
+      margin-left: 16px;
     }
   }
 }
@@ -221,18 +107,18 @@ body {
   width: 100%;
   display: flex;
   align-items: flex-end;
-  @media(max-width:$tablet-breakpoint){
-    display:none;
+  @media (max-width: $tablet-breakpoint) {
+    display: none;
   }
 }
-.controls--mobile{
+.controls--mobile {
   position: absolute;
-  bottom:0;
-  left:0;
-  width:100%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
-  @media(min-width:$tablet-breakpoint + 1px){
+  @media (min-width: $tablet-breakpoint + 1px) {
     display: none;
   }
 }
@@ -262,36 +148,32 @@ body {
   background-image: url("assets/images/icon-angle-right.svg");
 }
 
-.bottom-section-wrapper{
-  @media(max-width: $tablet-breakpoint) and (min-width:500px ){
+.bottom-section-wrapper {
+  @media (max-width: $tablet-breakpoint) and (min-width: 500px) {
     flex-direction: row;
     flex-wrap: wrap;
-    .left-bottom-section{
-      order:1;
-      width:50%;
+    .left-bottom-section {
+      order: 1;
+      width: 50%;
     }
-    .right-bottom-section{
-      order:2;
-      width:50%;
+    .right-bottom-section {
+      order: 2;
+      width: 50%;
     }
-    .central-bottom-section{
-      order:3;
-      width:100%;
+    .central-bottom-section {
+      order: 3;
+      width: 100%;
     }
   }
 }
 .left-bottom-section {
   width: 30%;
-  
 }
 .central-bottom-section {
-  width:40%;
-  
-  
+  width: 40%;
 }
 .right-bottom-section {
   width: 30%;
- 
 }
 
 .bottom-section {
@@ -299,31 +181,29 @@ body {
     width: 100%;
     height: 100%;
   }
-  @media(max-width:$tablet-breakpoint){
-    width:100%;
+  @media (max-width: $tablet-breakpoint) {
+    width: 100%;
   }
 }
 
-.about-section{
-  font-size:0.9rem;
-  padding:10% ;
-  .about-section-heading{
+.about-section {
+  font-size: 0.9rem;
+  padding: 10%;
+  .about-section-heading {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font-size:1rem;
-    margin-bottom:24px;
-    @media(max-width:$tablet-breakpoint){
-      font-size:0.9em;
+    font-size: 1rem;
+    margin-bottom: 24px;
+    @media (max-width: $tablet-breakpoint) {
+      font-size: 0.9em;
     }
   }
-  
 }
-@keyframes spin{
-  50%{
+@keyframes spin {
+  50% {
     transform: rotate(90deg);
   }
-  100%{
+  100% {
     transform: rotate(0deg);
-
   }
 }
