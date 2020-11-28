@@ -10,3 +10,7 @@
     text-decoration: none;
   }
 }
+
+a {
+  @include link-reset;
+}

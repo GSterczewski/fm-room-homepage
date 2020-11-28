@@ -159,7 +159,7 @@ body {
 }
 
 .bottom-section {
-  max-height: 266px;
+  //max-height: 266px;
   @media (max-width: $tablet-breakpoint) and (min-width: 500px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -203,6 +203,19 @@ body {
     @media (max-width: $tablet-breakpoint) {
       font-size: 0.9em;
     }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  .author {
+    color: #00bb7c;
+  }
+  .fm {
+    color: #3e54a3;
   }
 }
 
